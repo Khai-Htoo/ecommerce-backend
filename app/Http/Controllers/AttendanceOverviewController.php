@@ -14,6 +14,7 @@ class AttendanceOverviewController extends Controller
     //attendance overview
     public function attendanceOverview()
     {
+        // permission
         if (!Auth::user()->can('view_attendance_overview')) {
             return back();
         }
@@ -23,6 +24,7 @@ class AttendanceOverviewController extends Controller
 
     public function attendanceOverviewTable(Request $request)
     {
+        // json blade attendance table data render
         $numberOfDays = cal_days_in_month(CAL_GREGORIAN, $request->month, $request->year);
         $period = new CarbonPeriod($request->year . '-' . $request->month . '-' . '01', $request->year . '-' . $request->month . '-' . $numberOfDays);
         $employee = User::where('group', 'employee')->where('name', 'like', '%' . $request->userName . '%')->get();

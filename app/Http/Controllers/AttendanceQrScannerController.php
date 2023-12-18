@@ -14,6 +14,7 @@ class AttendanceQrScannerController extends Controller
     // attendance qr scanner
     public function attendanceScan()
     {
+        // permission
         if (!Auth::user()->can('view_QrScan')) {
             return back();
         }
@@ -31,10 +32,12 @@ class AttendanceQrScannerController extends Controller
         if (!Hash::check(date('Y-m-d'), $request->value)) {
             return back()->with(['error' => 'Your Qr Code is wrong']);
         }
+
         $check = Check::firstOrCreate([
             'user_id' => Auth::user()->id,
             'date' => now()->format('Y-m-d'),
         ]);
+
         if (is_null($check->checkin)) {
             Check::where('user_id', Auth::user()->id)->update(['checkin' => Carbon::parse($request->date)->format('H:i:s')]);
             return ['status' => 200, 'msg' => 'Successfully Check In' . now()];

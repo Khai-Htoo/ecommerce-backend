@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Product;
 use App\Models\Review;
 use Illuminate\Http\Request;
@@ -39,6 +41,24 @@ class HomePageController extends Controller
         $category = Category::withCount('product')->get();
         return response()->json([
             'data' => $category,
+        ], 200);
+    }
+
+    // color
+    public function color()
+    {
+        $color = Color::all();
+        return response()->json([
+            'data' => $color,
+        ], 200);
+    }
+
+    // brand
+    public function brand()
+    {
+        $brand = Brand::all();
+        return response()->json([
+            'data' => $brand,
         ], 200);
     }
 
@@ -100,5 +120,34 @@ class HomePageController extends Controller
             'status' => 'success',
             'review' => $review,
         ]);
+    }
+
+    // productList
+    public function productList(Request $request)
+    {
+
+        if ($request->paginate == 'all' && $request->sort == 'all') {
+            $product = Product::all();
+            return response()->json([
+                'data' => $product,
+            ]);
+
+        } elseif ($request->sort == 'expensive') {
+            $product = Product::orderBy('discount_price', 'desc')->get();
+            return response()->json([
+                'data' => $product,
+            ]);
+        } elseif ($request->sort == 'cheapest') {
+            $product = Product::orderBy('discount_price', 'asc')->get();
+            return response()->json([
+                'data' => $product,
+            ]);
+        } elseif ($request->paginate) {
+            $product = Product::paginate($request->paginate);
+            return response()->json([
+                'paginateData' => $product,
+            ]);
+        }
+
     }
 }

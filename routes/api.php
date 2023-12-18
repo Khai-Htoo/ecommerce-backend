@@ -49,8 +49,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 // home page
 Route::get('products', [HomePageController::class, 'allProduct']);
+Route::get('color', [HomePageController::class, 'color']);
+Route::get('brand', [HomePageController::class, 'brand']);
 Route::get('onSale', [HomePageController::class, 'onSale']);
 Route::get('new', [HomePageController::class, 'new']);
 Route::get('view', [HomePageController::class, 'view']);
 Route::get('category', [HomePageController::class, 'category']);
 Route::get('product/{id}', [HomePageController::class, 'eachProduct']);
+Route::get('productList', [HomePageController::class, 'productList']);

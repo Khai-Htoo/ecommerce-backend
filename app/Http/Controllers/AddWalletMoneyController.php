@@ -17,6 +17,7 @@ class AddWalletMoneyController extends Controller
     //add money list page
     public function index()
     {
+        // permission
         if (!Auth::user()->can('view_add_wallet')) {
             return back();
         }
@@ -56,6 +57,7 @@ class AddWalletMoneyController extends Controller
     // add money process
     public function addWalletMoney(Request $request)
     {
+        // permission
         if (!Auth::user()->can('create_add_wallet')) {
             return back();
         }
@@ -69,7 +71,7 @@ class AddWalletMoneyController extends Controller
             $addMoney->update([
                 'status' => 'success',
             ]);
-            // notification for sent
+            // notification for success
             $title = 'Success Add Money';
             $message = 'Add ' . $addMoney->amount . ' money to your wallet';
             $source_id = $addMoney->user->id;
@@ -82,7 +84,7 @@ class AddWalletMoneyController extends Controller
             $addMoney->update([
                 'status' => 'cancel',
             ]);
-            // notification for sent
+            // notification for reject
             $title = 'Cancel Add Money';
             $message = 'Invalid Image,We have not received the money';
             $source_id = $addMoney->user_id;
@@ -93,9 +95,10 @@ class AddWalletMoneyController extends Controller
         }
     }
 
-    // delete selected data
+    // delete all selected data
     public function deleteSelectedAddMoney(Request $request)
     {
+        // permission
         if (!Auth::user()->can('delete_add_wallet')) {
             return back();
         }

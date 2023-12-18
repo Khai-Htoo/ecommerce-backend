@@ -19,6 +19,7 @@ class AttendanceController extends Controller
 
     public function index()
     {
+        // permission
         if (!Auth::user()->can('view_attendance')) {
             return back();
         }
@@ -32,9 +33,11 @@ class AttendanceController extends Controller
 
     public function create()
     {
+        // permission
         if (!Auth::user()->can('create_attendance')) {
             return back();
         }
+        // json blade create attendance form render
         $user = User::all();
         return view('components.createAttendanceForm', compact('user'))->render();
     }
@@ -104,8 +107,10 @@ class AttendanceController extends Controller
             ->make(true);
     }
 
+    // create attendance
     public function store(createAttendance $request)
     {
+        // permission
         if (!Auth::user()->can('create_attendance')) {
             return back();
         }
@@ -124,18 +129,23 @@ class AttendanceController extends Controller
         return back()->with(['success' => 'Check Successfully created']);
     }
 
+    // attendance edit
     public function edit(string $id)
     {
+        // permission
         if (!Auth::user()->can('edit_attendance')) {
             return back();
         }
+        // json blade  edit attendance form render
         $user = User::all();
         $check = Check::where('id', $id)->first();
         return view('components.cupdateAttendanceForm', compact('user', 'check'))->render();
     }
 
+    // attendance update
     public function updateAttendance(updateAttendance $request)
     {
+        // permission
         if (!Auth::user()->can('edit_attendance')) {
             return back();
         }
@@ -151,6 +161,7 @@ class AttendanceController extends Controller
 
     public function destroy(string $id)
     {
+        // permission
         if (!Auth::user()->can('delete_attendance')) {
             return back();
         }
@@ -161,6 +172,7 @@ class AttendanceController extends Controller
     // deleteSelectedAttendance
     public function deleteSelectedAttendance(Request $request)
     {
+        // permission
         if (!Auth::user()->can('delete_attendance')) {
             return back();
         }

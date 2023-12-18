@@ -29,9 +29,9 @@ class ProductSeeder extends Seeder
                 'supplier_id' => '1',
                 'brand_id' => '1',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in',
-                'buy_price' => '100',
-                'sale_price' => '150',
-                'discount_price' => '140',
+                'buy_price' => '300',
+                'sale_price' => '350',
+                'discount_price' => '340',
                 'total_qty' => '10',
                 'image' => $images[$key],
             ]);
@@ -52,9 +52,9 @@ class ProductSeeder extends Seeder
                 'supplier_id' => '1',
                 'brand_id' => '1',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in',
-                'buy_price' => '200',
-                'sale_price' => '250',
-                'discount_price' => '240',
+                'buy_price' => '400',
+                'sale_price' => '450',
+                'discount_price' => '440',
                 'total_qty' => '10',
                 'image' => $images[$key],
             ]);
@@ -76,9 +76,9 @@ class ProductSeeder extends Seeder
                 'supplier_id' => '1',
                 'brand_id' => '3',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in',
-                'buy_price' => '200',
-                'sale_price' => '250',
-                'discount_price' => '240',
+                'buy_price' => '40',
+                'sale_price' => '50',
+                'discount_price' => '45',
                 'total_qty' => '10',
                 'image' => $images[$key],
             ]);
@@ -99,9 +99,9 @@ class ProductSeeder extends Seeder
                 'supplier_id' => '1',
                 'brand_id' => '3',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in',
-                'buy_price' => '200',
-                'sale_price' => '250',
-                'discount_price' => '240',
+                'buy_price' => '40',
+                'sale_price' => '50',
+                'discount_price' => '45',
                 'total_qty' => '10',
                 'image' => $images[$key],
             ]);
@@ -109,7 +109,7 @@ class ProductSeeder extends Seeder
             $product->color()->sync([4, 5, 6]);
         }
 
-        // shoe
+        // toy
         $product_mm = ['လော့ဖန်စီ', 'ကြီးမားသောမစ္စစင်ဒီ ', 'ချစ်စရာကာတွန်းအကြီးကြီး', 'ချစ်စရာရုပ်လေး'];
         $product = ['LotFancy', 'Misscindy Giant ', 'Cute Cartoon Big', 'Cute Teddy'];
         $images = ['toy1.jpg', 'toy2.jpg', 'toy3.jpg', 'toy4.jpg'];
@@ -122,9 +122,9 @@ class ProductSeeder extends Seeder
                 'supplier_id' => '1',
                 'brand_id' => '3',
                 'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in',
-                'buy_price' => '200',
-                'sale_price' => '250',
-                'discount_price' => '240',
+                'buy_price' => '20',
+                'sale_price' => '30',
+                'discount_price' => '25',
                 'total_qty' => '10',
                 'image' => $images[$key],
             ]);
