@@ -18,10 +18,10 @@
                     <div class="row">
 
                         @foreach ($permission as $p)
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" name="permissions[]" value="{{ $p->name }}"
-                                        id="{{ $p->id }}">
+                                    <input class="form-check-input" type="checkbox" name="permissions[]"
+                                        value="{{ $p->name }}" id="{{ $p->id }}">
                                     <label class="form-check-label" for="{{ $p->id }}">
                                         {{ $p->name }}
                                     </label>

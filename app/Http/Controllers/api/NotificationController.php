@@ -26,6 +26,9 @@ class NotificationController extends Controller
         $user = User::where('id', $request->user_id)->first();
         $noti = $user->notifications()->where('id', $request->noti)->first();
         $noti->markAsRead();
-        return $noti;
+        return response()->json([
+            'notification' => $noti,
+            'notiCount' => count($user->unreadNotifications),
+        ]);
     }
 }

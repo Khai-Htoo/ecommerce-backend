@@ -30,6 +30,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('auth.login');
 });
+
+// language
 Route::get('/api/locale', function () {
     return response()->json(['locale' => app()->getLocale()]);
 });
@@ -37,10 +39,6 @@ Route::get('/api/locale', function () {
 Route::get('checkin-checkout', [CheckController::class, 'check'])->name('check');
 Route::get('checkInOut/{pinCode}', [CheckController::class, 'checkInOut'])->name('checkInOut');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
-// Route::get('/dashboard', function () {
-
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware(['auth'])->group(function () {
 
     // category
