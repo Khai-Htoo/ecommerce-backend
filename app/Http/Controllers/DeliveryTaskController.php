@@ -18,7 +18,15 @@ class DeliveryTaskController extends Controller
             return back();
         }
         $product = Product::all();
-        $user = User::with('roles')->get();
+        $users = User::with('roles')->get();
+        $user = [];
+        foreach ($users as $u) {
+            foreach ($u->roles as $r) {
+                if ($r->name == 'Delivery') {
+                    $user[] = $u;
+                }
+            }
+        }
         $tasks = DeliveryTask::with('user')->orderBy('serial_number', 'asc')->get();
         return view('employeeManagement.deliveryTask.index', compact('user', 'tasks', 'product'));
     }
