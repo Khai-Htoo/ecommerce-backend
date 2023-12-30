@@ -4,26 +4,3 @@ delivery one  => deliveryOne@gmail.com || password => 123123
 delivery two  => deliveryOne@gmail.com || password => 123123
 
 
-<--------------------about project------------------------->
-ညီ့projectကတော့ အကိုecommerce ရယ် အကိုတိုu tube channelကprojectတွေရယ်ပေါင်းစပ်ရေးထားတာပါဗျ
-အကို့တို့projectတွေကideaဖဲယူတာပါဗျအထဲမှတော့အဆင်ပြေသလိုရေးထားတာပေါ့နော်တစ်မျိုးမရတစ်မျိုး Hee
-
-// ecommerce
-ecommerce ကတော့အကိုprojectနဲ့တူတူပါဖဲ
-
-//wallet
-registerလုပ်တာနဲ့walletအသစ်တစ်ခုရမယ်ပေါ့နော် amount 0နဲ့ အာ့မှကိုကwave နဲ့တခုခုပေါ့နော် လွဲထားတဲ့screenshotနဲ့ကိုထည့်မဲ့amountကို my accountရဲ့add moneyကနေတစ်ဆင့်ငွေထည့်လိုရမယ်ပေါ့နော်
-အဲ့မာadminကနေတစ်ဆင်စီစစ်ပီးတော့ လက်ခံမခံပေါ့နော်လက်ခံရင်ငွေဝင်လာမယ် အာ့ပိုက်ဆံနဲ့အချင်းချင်းပိုဆံလွဲရမယ် orderတွေတင်လိုရမယ်
-companyရဲ့ဝင်ငွေကိုတော့adminရဲ့walletနဲ့တွက်ထားတယ်ပေါ့နော် minusပြနေရငိအရှုး productတွေဝယ်ရာမှာလည်းစျေးအလိုက်admin walletထဲကဖဲဖြတ်ပါမယ်
-orderကိုadminကလက်ခံမှသာ customerဘက်ကငွေကိုဖြတ်ပါမယ် orderလက်ခံတဲ့နေရာမှာလည်း ဘယ်deliveryကိုပိုဖိုtaskကိုပေးလိုရပါမယ် အဲ့taskကလည်းသူနဲ့ဆိုင်တဲ့deliveryဆီမာဖဲပေါ်ပါမယ်
-
-//management
-managementပိုင်းမာတော့admin ရယ် hr ရယ် deliveryဖဲထည့်ထားပါတယ်လောလောဆယ်တော့ checkin checkout တွေလုပ်ရပါမယ် အဲ့မှတစ်ဆင့်payroll salaryတွေတွက်ပါမယ် laravel spatieနဲ့role and permissionတွေပေးထားပါတယ်
-check url http://localhost:8000/checkin-checkout
-
-//auth
-multi authလုပ်ဖိုစဥ်းစားထားပေမ walletမာကြအဆင်မပြေတော့လို group လိုက် authenication လုပ်ထားပါတယ်ဗျ
-
-
-<------------------ကျတော်အတွက်အကိုအချိန်ပေးတဲ့အတွက်ကျေးဇူးတင်ပါတယ်ဗျ------------------------>
-
